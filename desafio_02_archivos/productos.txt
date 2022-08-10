@@ -1,0 +1,38 @@
+[
+  {
+    "nombre": "Smartphone Moto E6 Plus 32Gb",
+    "precio": 41000,
+    "imagen": "https://arolzpkrjp.cloudimg.io/v7/www.allcellymas.com.ar/wp-content/uploads/2020/10/160345912395b764f4645ddeffff3927f04e743707.jpg",
+    "id": 1
+  },
+  {
+    "nombre": "Smartphone Samsung A20 32Gb",
+    "precio": 50000,
+    "imagen": "https://www.notebookcheck.org/uploads/tx_nbc2/SamsungGalaxyA20s__1_.JPG",
+    "id": 2
+  },
+  {
+    "nombre": "Auriculares inalámbricos Sony WF-C500",
+    "precio": 18000,
+    "imagen": "https://www.sony.com.ar/image/e3beeee2eeeb7580a61adcab32538851?fmt=pjpeg&wid=1200&hei=470&bgcolor=F1F5F9&bgc=F1F5F9",
+    "id": 3
+  },
+  {
+    "nombre": "Cargador Powerbank 2200mah",
+    "precio": 1730,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_771164-MLA47918428092_102021-O.webp",
+    "id": 4
+  },
+  {
+    "nombre": "Cargador Powerbank 2200mah",
+    "precio": 1730,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_771164-MLA47918428092_102021-O.webp",
+    "id": 5
+  },
+  {
+    "nombre": "Cargador Powerbank 2200mah",
+    "precio": 1730,
+    "imagen": "https://http2.mlstatic.com/D_NQ_NP_771164-MLA47918428092_102021-O.webp",
+    "id": 6
+  }
+]
