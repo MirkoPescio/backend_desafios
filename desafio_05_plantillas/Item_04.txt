@@ -1,0 +1,1 @@
+El motor de plantilla que usaría en mi proyecto es Handlebars por su sintaxis sencilla en la aplicación del código javascript y la misma escritura de HTML5
