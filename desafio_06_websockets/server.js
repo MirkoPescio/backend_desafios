@@ -8,6 +8,7 @@ const PORT = 8080;
 const app = express();
 const httpserver = new HttpServer(app);
 const io = new IOServer(httpserver);
+const fs = require('fs');
 
 app.use(express.static('views'));
 
@@ -27,6 +28,7 @@ io.on('connection', socket => {
 	socket.on('newMessage', newMessage => {
 		messages.push(newMessage);
 		io.sockets.emit('messages', messages);
+		fs.writeFileSync('./chat.txt', JSON.stringify(messages));
 	})
 });
 
