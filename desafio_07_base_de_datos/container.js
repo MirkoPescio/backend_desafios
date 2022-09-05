@@ -8,7 +8,7 @@ class Container {
     }
     save = obj => {
         this.knex(this.tableName).insert(obj)
-            .then(() => console.log('Saved'))
+            .then(() => console.log('Tabla agregada!!'))
             .catch(err => { console.log(err); throw err })
             .finally(() => this.knex.destroy())
     }
@@ -18,10 +18,10 @@ class Container {
             if (obj) {
                 return obj;
             } else {
-                return { message: 'ERROR' };
+                return { message: 'Error' };
             }
         } catch (err) {
-            return { message: 'ERROR' };
+            return { message: 'Error' };
         }
     }
     getAll = async () => {
@@ -36,25 +36,25 @@ class Container {
     deleteById = async id => {
         try {
             this.knex.from(this.tableName).where('id', '=', id).del()
-            return { message: 'DONE!' };
+            return { message: 'Hecho!' };
         } catch (err) {
-            return { message: 'ERROR' };
+            return { message: 'Error' };
         }
     }
     deleteAll = async () => {
         try {
             this.knex.from(this.tableName).del()
-            return { message: 'DONE!' }
+            return { message: 'Hecho!' }
         } catch (err) {
-            return { message: 'ERROR' };
+            return { message: 'Error' };
         }
     }
     update = async obj => {
         try {
             this.knex.from(this.tableName).update(obj).update()
-            return { message: 'DONE!' };
+            return { message: 'Hecho!' };
         } catch (err) {
-            return { message: 'ERROR' };
+            return { message: 'Error' };
         }
     }
 }
