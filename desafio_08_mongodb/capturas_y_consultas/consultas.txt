@@ -1,0 +1,43 @@
+show databases
+
+use ecommerce
+
+db.mensajes.insertOne({user: "Mirko", message: "¿Tiene stock de bicicletas BMX?"})
+db.mensajes.insertMany([{user: "Adrián", message: "Me interesa adquirir un Volkswagen Amarok"}, {user: "Leandro", message: "Me interesa comprar un Volkswagen Polo Trend"}, {user: "Anabella", message: "Me interesa comprar un Volkswagen Taos"}, {user: "Elena", message: "Me interesa saber de planes de financiamiento 70/30"}, {user: "Víctor", message: "Me interesa comprar una camioneta Volkswagen Saveiro"}, {user: "Carlos", message: "Me interesacomprar una camioneta de caja cerrada usando como parte de pago una Renault Duster"}, {user: "Alejandro", message: "¿Tienen stock de Audi R8?"}, {user: "Agostina", message: "Me interesa entrar en un plan de financiamiento 80/20 por una Chevrolet Spin"}, {user: "Andrea", message: "Quisiera vender mi Volkswagen Gol y comprar un Renault Logan"}])
+
+db.mensajes.find()
+
+db.productos.insertOne({name: "Volkswagen Polo Trend", price: 120})
+db.productos.insertMany([{name: "Volkswagen Virtus", price: 580}, {name: "Volkswagen Nivus", price: 900}, {name: "Volkswagen Taos", price: 1280}, {name: "Volkswagen Saveiro", price: 1700}, {name: "Volkswagen Amarok Trendline", price: 2300}, {name: "Volkswagen Amarok Comfort", price: 2860}, {name: "Volkswagen Amarok Highline", price: 3350}, {name: "Renault Duster", price: 4320}, {name: "Audi R8", price: 4990}])
+
+db.productos.find()
+
+show collections
+
+db.mensajes.storageSize()
+db.productos.storageSize()
+
+db.mensajes.count()
+db.productos.count()
+
+db.productos.insertOne({name: "Ferrari", price: 5000})
+
+db.productos.find()
+
+db.productos.find({price: {$lt: 1000}})
+db.productos.find({$and: [{price: {$gt: 1000}}, {price: {$lt: 3000}}]})
+db.productos.find({price: {$gt: 3000}})
+db.productos.find({},{_id:0,"name":1}).sort({ price: 1 }).limit(1).skip(2)
+
+db.productos.updateMany({}, {$set: {"stock": 100}}, {multi: true})
+
+db.productos.updateMany({price: {$gt: 4000}}, {$set: {stock: 0}}, {multi: true})
+
+db.productos.deleteMany({price: {$lt: 1000}})
+db.productos.find()
+
+db.createUser({user: "pepe", pwd: "asd456", roles: [{ role: "read", db: "ecommerce" }]})
+
+db.auth("pepe", "asd456")
+
+db.productos.createOne({ "name": "peugeot 208", price: 1500 })
