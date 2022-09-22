@@ -35,11 +35,16 @@ class Carts extends Container {
   }
 
   getProducts(id) {
+    // Para MongoDB
     return this.model.findById(id).find({});
     // Mi planteo de solución sería el siguiente:
     // return this.model.findById(id).find({}, { productos: 1, _id: 0 });
     // Tendría que mostrar solamente el array de productos en el carrito
     // Pero tengo un error que no encuentro que me cierra el servidor
+
+    // Con firebase:
+    // const cartId = "5tITNjRo1mbEckYqady3";
+    // return this.db.collection("carritos").doc(cartId).collection(cartId).get();
   }
 
   async saveProduct(idProduct, idCart) {
@@ -50,29 +55,23 @@ class Carts extends Container {
     const cart = await this.model.findById(idCart);
     await cart.productos.push(product);
     return cart.save();
-
-    /*
-    // Para implementar con firebase
-    const product = await productos.db.collection('productos').doc(idProduct).get();
-    const cart = await this.db.collection('carritos').doc(idCart).get();
-    console.log(cart)
-
-    const cartData = cart.data()
-    const cartProductos = cartData.productos
-
-    return await cartProductos.push(product);
-    */
   }
 
   async deleteProduct(idCart, idProduct) {
+    
     const cart = await this.model.findById(idCart);
     const index = await cart.productos.findIndex(
-        product => product._id == idProduct
+      (product) => product._id == idProduct
     );
     await cart.productos.splice(index, 1);
     return await cart.save();
     // Comprobado con Postman
     // Usando por ejemplo localhost:8080/api/carritos/6329299434051e21f36cf710/productos/6328d827b14d64639ed91e79
+    
+
+    // Con Firebase: (Comprobado con Postman)
+    // const cartId = "5tITNjRo1mbEckYqady3";
+		// return this.db.collection("carritos").doc(cartId).collection(cartId).doc(idProduct).delete();
   }
 }
 

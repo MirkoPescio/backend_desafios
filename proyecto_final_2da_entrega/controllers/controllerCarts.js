@@ -41,8 +41,8 @@ const getProducts = async (req, res) => {
 // Añadir producto al carrito (POST)
 const addProduct = (req, res) => {
   const products = req.body;
-  carts.saveProduct(products.id_prod, req.params.id);
-  // En el postman hay que poner un objeto solo con el id del producto
+  carts.save(products);
+  // En el postman, con mongoDB hay que poner un objeto solo con el id del producto
   // Agregado previamente en el array de productos: localhost:8080/api/productos
   // Un objeto como el siguiente: { "id_prod": "6328d827b14d64639ed91e79" }
   // De lo contrario va a dar error

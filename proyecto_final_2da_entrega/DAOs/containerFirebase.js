@@ -16,13 +16,15 @@ class Container {
 	constructor() {
 		this.db = getFirestore();
 	}
-	// Guardar un objeto
-	save(obj) {
+	// Añadir objetos a una colección
+	async save(obj) {
 		try {
 			// Para la colección productos
 		    return this.db.collection('productos').add(obj);
-			// Para la colección carritos
-			// return this.db.collection('carritos').add(obj);
+			// Para la colección carritos (descomentar las próximas 2 líneas y comentar la anterior)
+			// const cartId = "5tITNjRo1mbEckYqady3";
+			// return this.db.collection("carritos").doc(cartId).collection(cartId).add(obj);
+			
 		} catch (err) {
 			console.log(err);
 		}
