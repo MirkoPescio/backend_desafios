@@ -1,13 +1,14 @@
+
 const Carts = require("../DAOs/containerCarts.js");
 
 const carts = new Carts();
 let admin;
 
-// Añadir un carrito (POST)
+// Añadir un carrito con MongoDB (POST)
 const addCart = async (req, res) => {
   const products = req.body;
   await carts.save(products);
-  // En Postman (con el método POST), para crear el carrito alcanza con escribir: [{}]
+  // En Postman (con el método POST), para crear el carrito en MongoDB alcanza con escribir: [{}]
   // y nos va a crear el carrito con la siguiente estructura:
   /*
   [
@@ -19,9 +20,10 @@ const addCart = async (req, res) => {
     __v: 5
     }
   ]
-*/
+  */
   res.json({ message: "Carrito agregado!" });
 };
+
 
 // Eliminar un carrito (DELETE)
 const deleteCart = async (req, res) => {

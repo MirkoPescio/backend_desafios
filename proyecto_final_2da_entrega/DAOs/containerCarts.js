@@ -1,5 +1,15 @@
 const { Schema } = require("mongoose");
+
+/*
+DATO CLAVE DEL DESAFIO EN LO QUE RESPECTA A LAS BASES DE DATOS:
+Dependiendo a que base de datos nos querramos conectar, tenemos que comentar una línea de
+código y descomentar otra.
+¿Cuáles? las que tienen el la constante Products (líneas 10 y 11 de código de este archivo)
+*/
+
 const Container = require("../DAOs/containerMongoDB.js");
+// const Container = require("../DAOs/containerFirebase.js");
+
 const { productos } = require("../controllers/controllerProducts");
 
 class Carts extends Container {
@@ -34,10 +44,24 @@ class Carts extends Container {
 
   async saveProduct(idProduct, idCart) {
     console.log(idProduct, idCart);
+    
+    // Para implementar con MongoDB
     const product = await productos.model.findById(idProduct);
     const cart = await this.model.findById(idCart);
     await cart.productos.push(product);
-    return await cart.save();
+    return cart.save();
+
+    /*
+    // Para implementar con firebase
+    const product = await productos.db.collection('productos').doc(idProduct).get();
+    const cart = await this.db.collection('carritos').doc(idCart).get();
+    console.log(cart)
+
+    const cartData = cart.data()
+    const cartProductos = cartData.productos
+
+    return await cartProductos.push(product);
+    */
   }
 
   async deleteProduct(idCart, idProduct) {

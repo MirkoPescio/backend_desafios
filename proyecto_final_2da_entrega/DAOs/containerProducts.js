@@ -28,6 +28,8 @@ class Products extends Container {
 
 module.exports = Products;
 
+// Los siguientes productos son para probar con postman o con mongoshell
+
 /*
 const productosDePrueba = [
 	{ "nombre": "Uncharted 4", "descripcion": "Juego de aventura PS4", "imagen": "https://media.vandal.net/m/22805/uncharted-4-el-desenlace-del-ladron-201659184157_1.jpg", "precio": 1500, "stock": 14 },

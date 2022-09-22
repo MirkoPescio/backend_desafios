@@ -1,3 +1,11 @@
+/*
+DATO CLAVE DEL DESAFIO EN LO QUE RESPECTA A LAS BASES DE DATOS:
+Dependiendo a que base de datos nos querramos conectar, tenemos que comentar una línea de
+código y descomentar otra.
+¿Cuáles? las que tienen el la constante Products (líneas 9 y 10 de código de este archivo)
+*/
+
+
 const Products = require("../DAOs/containerProducts");
 // const Products = require('../DAOs/containerFirebase.js');
 
@@ -31,16 +39,17 @@ const addProduct = async (req, res) => {
     }
   */
   // El campo _id es añadido automaticamente por MongoDB ya que es un ObjectID
+  // Para agregar un producto con firebase se puede hacer desde Postman
   res.json({ message: "Producto agregado" });
 };
 
-//Update product
+// Actualizar producto
 const updateProduct = async (req, res) => {
   await productos.updateProduct(req.params.id, req.body);
   res.json({ message: "Producto actualizado" });
 };
 
-//Delete product
+// Eliminar producto
 const deleteProduct = async (req, res) => {
   await productos.deleteById(req.params.id);
   res.json({ message: "Producto eliminado" });

@@ -13,7 +13,7 @@ class Container {
       console.log(err);
     }
   }
-  //Save an object
+  // Guardar un objeto
   async save(obj) {
     try {
       return this.model.create(obj);
@@ -21,7 +21,7 @@ class Container {
       console.log(err);
     }
   }
-  //Get an object by ID
+  // Obtener objeto específico
   getById(id) {
     try {
       return this.model.findById(id);
@@ -29,7 +29,7 @@ class Container {
       console.log(err);
     }
   }
-  //Get all objects
+  // Obtener todos los objetos de una colección
   getAll() {
     try {
       console.log(this.model.find());
@@ -38,7 +38,7 @@ class Container {
       console.log(err);
     }
   }
-  //Delete one object
+  // Eliminar un objeto
   deleteById(id) {
     try {
       return this.model.findByIdAndDelete(id);
