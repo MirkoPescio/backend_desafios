@@ -1,4 +1,4 @@
-const { Schema } = require("mongoose");
+import { Schema } from "mongoose";
 
 /*
 DATO CLAVE DEL DESAFIO EN LO QUE RESPECTA A LAS BASES DE DATOS:
@@ -7,10 +7,10 @@ código y descomentar otra.
 ¿Cuáles? las que tienen el la constante Products (líneas 10 y 11 de código de este archivo)
 */
 
-const Container = require("../DAOs/containerMongoDB.js");
+import Container from "../DAOs/containerMongoDB.js";
 // const Container = require("../DAOs/containerFirebase.js");
 
-const { productos } = require("../controllers/controllerProducts");
+import { productos } from "../controllers/controllerProducts.js";
 
 class Carts extends Container {
   constructor() {
@@ -75,4 +75,4 @@ class Carts extends Container {
   }
 }
 
-module.exports = Carts;
+export default Carts;

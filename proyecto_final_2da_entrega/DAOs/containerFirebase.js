@@ -1,7 +1,7 @@
 
-const admin = require('firebase-admin');
-const serviceAccount = require('../db/proyecto-backend---coderhouse-firebase-adminsdk-wekkh-9d0ff676f7.json');
-const { getFirestore, doc, getDoc } = require('firebase-admin/firestore');
+import admin from 'firebase-admin';
+import serviceAccount from '../db/proyecto-backend---coderhouse-firebase-adminsdk-wekkh-9d0ff676f7.json';
+import { getFirestore, doc, getDoc } from 'firebase-admin/firestore';
 
 const firebaseConfig = {
 	credential: admin.credential.cert(serviceAccount),
@@ -56,4 +56,4 @@ class Container {
 	}
 }
 
-module.exports = Container;
+export default Container;

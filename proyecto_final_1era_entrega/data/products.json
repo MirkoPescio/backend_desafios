@@ -25,5 +25,14 @@
     "stock": 8,
     "id": 4,
     "timestamp": 1661916085925
+  },
+  {
+    "nombre": "Uncharted 4",
+    "descripcion": "Juego de aventura PS4",
+    "imagen": "https://media.vandal.net/m/22805/uncharted-4-el-desenlace-del-ladron-201659184157_1.jpg",
+    "precio": 1500,
+    "stock": 14,
+    "id": 5,
+    "timestamp": 1663952952548
   }
 ]

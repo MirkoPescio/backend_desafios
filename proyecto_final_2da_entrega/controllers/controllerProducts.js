@@ -2,14 +2,15 @@
 DATO CLAVE DEL DESAFIO EN LO QUE RESPECTA A LAS BASES DE DATOS:
 Dependiendo a que base de datos nos querramos conectar, tenemos que comentar una línea de
 código y descomentar otra.
-¿Cuáles? las que tienen el la constante Products (líneas 9 y 10 de código de este archivo)
+¿Cuáles? las que tienen el la constante Products (líneas 9, 10 y 11 de código de este archivo)
 */
 
 
-const Products = require("../DAOs/containerProducts");
-// const Products = require('../DAOs/containerFirebase.js');
+// import Products from "../DAOs/containerProducts.js";
+// import Products from '../DAOs/containerFirebase.js';
+import Products from '../DAOs/containerProductsJSON.js';
 
-const productos = new Products();
+const productos = new Products("./data/products.json");
 
 // Obtener todos los productos (GET) (De la colección productos = db.productos.find())
 const getProducts = async (req, res) => {
@@ -51,11 +52,14 @@ const updateProduct = async (req, res) => {
 
 // Eliminar producto
 const deleteProduct = async (req, res) => {
+  const id = Number(req.params.id);
+  console.log(id);
   await productos.deleteById(req.params.id);
+  productos.deleteProductJSON(id)
   res.json({ message: "Producto eliminado" });
 };
 
-module.exports = {
+export {
   productos,
   getProducts,
   addProduct,

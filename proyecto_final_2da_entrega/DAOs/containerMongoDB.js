@@ -1,4 +1,4 @@
-const { model } = require("mongoose");
+import { model } from "mongoose";
 
 class Container {
   constructor(collection, schema) {
@@ -48,4 +48,4 @@ class Container {
   }
 }
 
-module.exports = Container;
+export default Container;

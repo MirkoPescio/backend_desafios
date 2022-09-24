@@ -1,5 +1,5 @@
-const { Schema } = require("mongoose");
-const Container = require("../DAOs/containerMongoDB.js");
+import { Schema } from "mongoose";
+import Container from "../DAOs/containerMongoDB.js";
 
 class Products extends Container {
   constructor() {
@@ -26,7 +26,7 @@ class Products extends Container {
   }
 }
 
-module.exports = Products;
+export default Products;
 
 // Los siguientes productos son para probar con postman o con mongoshell
 
