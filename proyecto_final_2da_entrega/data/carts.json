@@ -1,6 +1,34 @@
 [
-    {
+  {
+    "id": 1,
+    "productos": [
+      {
+        "nombre": "FIFA 22",
+        "descripcion": "Juego de Football PS4/PS5",
+        "imagen": "https://www.clarin.com/img/2021/07/09/la-tapa-del-videojuego-fifa___tjKkHVKPI_720x0__1.jpg",
+        "precio": 4500,
+        "stock": 12,
+        "id": 3,
+        "timestamp": 1663990092371
+      },
+      {
+        "nombre": "The Last of Us",
+        "descripcion": "Juego de aventura PS3",
+        "imagen": "https://elbuengamer.com.co/821-thickbox_default/the-last-of-us-digital-ps3.jpg",
+        "precio": 1200,
+        "stock": 9,
+        "id": 2,
+        "timestamp": 1663990016568
+      },
+      {
+        "nombre": "Uncharted 4",
+        "descripcion": "Juego de aventura PS4",
+        "imagen": "https://media.vandal.net/m/22805/uncharted-4-el-desenlace-del-ladron-201659184157_1.jpg",
+        "precio": 1500,
+        "stock": 14,
         "id": 1,
-        "productos": []
-    }
+        "timestamp": 1663989697384
+      }
+    ]
+  }
 ]

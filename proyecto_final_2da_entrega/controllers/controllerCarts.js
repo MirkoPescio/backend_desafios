@@ -51,17 +51,10 @@ const deleteCart = async (req, res) => {
 const getProducts = async (req, res) => {
   const cartSelected = await carts.getProducts(req.params.id);
 
-  const id = Number(req.params.id);
-  if (isNaN(id))
-    return res
-      .status(400)
-      .send({ message: "Ingresa el ID de un carrito listado" });
-  const cartSelected2 = cartsJSON.getById2(id);
-  if (cartSelected2 == null)
-    return res
-      .status(404)
-      .send({ message: "Ingresa el ID de un carrito listado" });
+  const cartSelected2 = cartsJSON.readData();
+
   res.send(cartSelected);
+  return cartSelected2
 };
 
 // Añadir producto al carrito (POST)
@@ -91,7 +84,7 @@ const deleteProduct = (req, res) => {
   carts.deleteProducto(req.params.id, req.params.id_prod);
 
   const idCart = Number(req.params.id);
-  const { id } = req.body
+  const id = Number(req.params.id_prod);
   console.log(idCart)
   console.log(id)
   if (isNaN(idCart) || isNaN(id))

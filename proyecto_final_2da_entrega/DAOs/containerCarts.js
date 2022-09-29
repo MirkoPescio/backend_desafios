@@ -57,7 +57,7 @@ class Carts extends Container {
     return cart.save();
   }
 
-  async deleteProduct(idCart, idProduct) {
+  async deleteProducto(idCart, idProduct) {
     
     const cart = await this.model.findById(idCart);
     const index = await cart.productos.findIndex(

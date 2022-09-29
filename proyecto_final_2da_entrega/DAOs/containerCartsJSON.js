@@ -108,13 +108,12 @@ export default class CartsJSON {
         return el.id === idCartSelected
       })
       console.log(cartSelected)
-      if (cartSelected == null) return;
+      if (cartSelected == null) return false;
       const productToDelete = cartSelected.productos.findIndex((product) => {
         return product.id === idProduct
       });
       console.log(productToDelete)
-      if (productToDelete === -1) return;
-      console.log(cartSelected.productos)
+      if (productToDelete === -1) return false;
       cartSelected.productos.splice(productToDelete, 1);
       this.writeData();
       return "Producto eliminado!";
