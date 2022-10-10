@@ -1,9 +1,12 @@
+
+/*
 const form = (req, res) => {
 	res.render('form', { username: req.session.username });
 };
+*/
 
-const home = (req, res) => {
-	const { username } = req.body;
+const main = (req, res) => {
+	const { username } = req.session;
 	req.session.username = username;
 	res.redirect('/');
 }
@@ -17,4 +20,12 @@ const destroy = (req, res) => {
 	}
 }
 
-module.exports = { form, home, destroy };
+const signIn = (req, res) => {
+	res.render('login')
+}
+
+const signUp = (req, res) => {
+	res.render('register')
+}
+
+module.exports = { main, destroy, signIn, signUp };

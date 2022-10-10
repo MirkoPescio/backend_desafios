@@ -99,4 +99,5 @@ app.get("/api/products-test", async (req, res) => {
 const server = httpserver.listen(PORT, () =>
   console.log(`Server running on port ${PORT}`)
 );
+
 server.on("error", () => console.log(`Error: ${err}`));
