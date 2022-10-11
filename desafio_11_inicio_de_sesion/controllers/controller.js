@@ -1,14 +1,8 @@
 
-/*
-const form = (req, res) => {
-	res.render('form', { username: req.session.username });
-};
-*/
-
 const main = (req, res) => {
 	const { username } = req.session;
 	req.session.username = username;
-	res.redirect('/');
+	res.render('../views/form.handlebars');
 }
 
 const destroy = (req, res) => {

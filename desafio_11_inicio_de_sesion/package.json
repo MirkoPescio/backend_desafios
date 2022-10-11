@@ -19,6 +19,7 @@
     "faker": "^5.4.0",
     "knex": "^2.2.0",
     "mongoose": "^6.6.5",
+    "mongoose-cache": "^0.1.5",
     "mysql": "^2.18.1",
     "socket.io": "^4.5.1",
     "sqlite3": "^5.0.10"
