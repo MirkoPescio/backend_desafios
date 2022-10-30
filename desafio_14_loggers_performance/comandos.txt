@@ -1,0 +1,18 @@
+// NODEMON
+
+# npm run dev
+ejecutaría el siguiente comando del archivo package.json: nodemon server.js -p 8080 -m FORK
+
+// FOREVER
+
+# forever start server.js --PORT 8080
+# forever start server.js --PORT 8081
+# forever start server.js --PORT 8082
+# forever start server.js --PORT 8083
+
+// PM2
+
+# pm2 start server.js --name="Server1" --watch -- 8080
+# pm2 start server.js --name="Server2" --watch -i max -- 8081
+# pm2 start server.js --name="Server3" --watch -- 8082
+# pm2 start server.js --name="Server4" --watch -- 8083
