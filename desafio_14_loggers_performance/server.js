@@ -12,11 +12,13 @@ const mongoose = require("mongoose");
 const MongoStore = require("connect-mongo");
 const parseArgs = require("minimist");
 const cluster = require("cluster");
+const compression = require("compression");
 const advancedOptions = { useNewUrlParser: true, useUnifiedTopology: true };
 const { getNormalized } = require("./utils/normalizer.js");
-const info = require("./middlewares/info.js");
+const getSystemInformation = require("./middlewares/info.js");
 
 const fakerData = randomData();
+const infoSystem = getSystemInformation();
 require("dotenv").config();
 
 const products = new Container(optionsSQLite3, "products");
@@ -129,17 +131,11 @@ if (MODE === "CLUSTER" && cluster.isPrimary) {
     res.send(fakerData);
   });
 
-  app.get("/info", async (req, res) => {
-    res.send({
-      Argumentos_de_entrada: info.ARGS,
-      Nombre_de_la_plataforma: info.CURRENT_SYSTEM,
-      Versión_de_nodejs: info.NODE_VERSION,
-      Memoria_total_reservada: info.TOTAL_MEMORY,
-      Path_de_ejecución: info.CURRENT_PATH,
-      Proccess_id: info.PROCESS_ID,
-      Carpeta_del_proyecto: info.FOLDER_PATH,
-      Número_de_procesadores: info.N_PROCESSORS,
-    });
+  app.get("/info", (req, res) => {
+    res.json(infoSystem);
+  });
+  app.get("/info/gzip", compression(), (req, res) => {
+    res.json(infoSystem);
   });
 
   const server = httpserver.listen(PORT, () => {

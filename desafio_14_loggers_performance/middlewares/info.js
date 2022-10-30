@@ -1,7 +1,7 @@
 const os = require("os");
 
-
-module.exports = {
+function getSystemInformation() {
+  const data = {
     ARGS: process.argv.slice(2),
     CURRENT_SYSTEM: process.platform,
     NODE_VERSION: process.version,
@@ -10,4 +10,8 @@ module.exports = {
     FOLDER_PATH: process.cwd,
     PROCESS_ID: process.pid,
     N_PROCESSORS: os.cpus().length,
+  };
+  return data;
 }
+
+module.exports = getSystemInformation;
