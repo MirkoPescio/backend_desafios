@@ -1,3 +1,8 @@
+// EJECUCION CON NODE EN MODO FORK y CLUSTER
+
+# node server.js -p 8080 -m FORK
+# node server.js -p 8080 -m CLUSTER
+
 // NODEMON
 
 # npm run dev
@@ -16,3 +21,18 @@ ejecutaría el siguiente comando del archivo package.json: nodemon server.js -p 
 # pm2 start server.js --name="Server2" --watch -i max -- 8081
 # pm2 start server.js --name="Server3" --watch -- 8082
 # pm2 start server.js --name="Server4" --watch -- 8083
+
+// Artillery
+
+# artillery quick -c 50 -n 20 "http://localhost:8080/info" > ./logs/result_fork.txt
+# artillery quick -c 50 -n 20 "http://localhost:8080/info" > ./logs/result_cluster.txt
+
+// TEST CON Artillery
+
+# node --prof server.js
+# artillery quick -c 50 -n 20 "http://localhost:8080/info" > ./logs/artillery_slow.txt
+
+// MODO INSPECT
+
+# node --inspect server.js
+# artillery quick -c 50 -n 20 "http://localhost:8080/info" > ./logs/artillery_inspect.txt
