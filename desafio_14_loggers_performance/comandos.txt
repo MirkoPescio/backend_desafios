@@ -36,3 +36,7 @@ ejecutaría el siguiente comando del archivo package.json: nodemon server.js -p 
 
 # node --inspect server.js
 # artillery quick -c 50 -n 20 "http://localhost:8080/info" > ./logs/artillery_inspect.txt
+
+// 0x
+
+# 0x server.js

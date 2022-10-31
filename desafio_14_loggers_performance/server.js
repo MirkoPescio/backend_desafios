@@ -14,6 +14,7 @@ const MongoStore = require("connect-mongo");
 const parseArgs = require("minimist");
 const cluster = require("cluster");
 const compression = require("compression");
+const logger = require("./middlewares/logger.js");
 const advancedOptions = { useNewUrlParser: true, useUnifiedTopology: true };
 const { getNormalized } = require("./utils/normalizer.js");
 const getSystemInformation = require("./middlewares/info.js");
@@ -128,20 +129,29 @@ if (MODE === "CLUSTER" && cluster.isPrimary) {
   });
 
   app.get("/api/products-test", async (req, res) => {
+    logger.info("Ruta accedida");
     console.log("Conexión establecida a faker");
     res.send(fakerData);
   });
 
   app.get("/info", (req, res) => {
+    logger.info("Ruta accedida");
     res.json(infoSystem);
   });
+
   app.get("/info/gzip", compression(), (req, res) => {
+    logger.info("Ruta accedida");
     res.json(infoSystem);
+  });
+
+  app.get('*', (req, res) => {
+    logger.warn('Ruta no implementada');
+    res.send('Ruta no implementada');
   });
 
   const server = httpserver.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
   });
 
-  server.on("error", () => console.log(`Error: ${err}`));
+  server.on("error", (err) => console.log(`Error: ${err}`));
 }
