@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const os = require("os");
 const { Server: HttpServer } = require("http");
@@ -21,7 +22,6 @@ const getSystemInformation = require("./middlewares/info.js");
 
 const fakerData = randomData();
 const infoSystem = getSystemInformation();
-require("dotenv").config();
 
 const products = new Container(optionsSQLite3, "products");
 const messages = new Container(optionsMariaDB, "messages");
@@ -70,13 +70,11 @@ if (MODE === "CLUSTER" && cluster.isPrimary) {
       store: MongoStore.create({
         mongoUrl: mongoDBServer,
         mongoOptions: advancedOptions,
-        ttl: 60,
-        collectionName: "sessions",
+        ttl: 100,
       }),
       secret: "secret",
       resave: true,
       saveUninitialized: true,
-      cookie: { maxAge: 600000 },
     })
   );
 
@@ -86,13 +84,14 @@ if (MODE === "CLUSTER" && cluster.isPrimary) {
   app.set("views", "./views");
   app.set("view engine", "handlebars");
 
-  const mongo_uri = process.env.MONGOURI;
+  // Para conexión local a MongoDB
+  // const mongo_uri = process.env.MONGOURI;
 
-  mongoose.connect(mongo_uri, function (err) {
+  mongoose.connect(mongoDBServer, function (err) {
     if (err) {
       throw err;
     } else {
-      console.log(`Conexión exitosa a ${mongo_uri}`);
+      console.log(`Conexión exitosa a ${mongoDBServer}`);
     }
   });
 
