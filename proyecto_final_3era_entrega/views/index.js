@@ -33,6 +33,7 @@ const renderProducts = products => {
 			<td class="align-middle">
 				<img src="${product.img}" alt="${product.name}" width="100px">
 			</td>
+			<td class="align-middle"><i class="btn">Eliminar<i></td>
 		</tr>`;
 		});
 	} else {

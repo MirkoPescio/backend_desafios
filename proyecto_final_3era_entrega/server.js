@@ -20,11 +20,13 @@ const advancedOptions = { useNewUrlParser: true, useUnifiedTopology: true };
 const { getNormalized } = require("./utils/normalizer.js");
 const getSystemInformation = require("./middlewares/info.js");
 
+
 const fakerData = randomData();
 const infoSystem = getSystemInformation();
 
 const products = new Container(optionsSQLite3, "products");
 const messages = new Container(optionsMariaDB, "messages");
+
 
 const mongoDBServer = process.env.MONGODBSERVER;
 

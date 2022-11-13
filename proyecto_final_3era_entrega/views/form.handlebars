@@ -1,4 +1,11 @@
 {{#if username}}
+<style>
+	.btn {
+		z-index: 500;
+		color: aliceblue;
+	}
+</style>
+
 <div class="bg-success p-4 mb-4 d-flex justify-content-between align-items-center" style="--bs-bg-opacity: .5;">
 	<h1>Bienvenido {{username}}</h1>
 	<form action="/" method="POST">
@@ -32,9 +39,10 @@
 	<table class="table table-dark">
 		<thead>
 			<tr>
-				<th>Nombre</th>
-				<th>Precio</th>
-				<th>Foto</th>
+				<th class="align-middle">Nombre</th>
+				<th class="align-middle">Precio</th>
+				<th class="align-middle">Foto</th>
+				<th class="align-middle">Eliminar</th>
 			</tr>
 		</thead>
 		<tbody id="table-products"></tbody>
