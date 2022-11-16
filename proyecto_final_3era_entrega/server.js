@@ -15,11 +15,12 @@ const MongoStore = require("connect-mongo");
 const parseArgs = require("minimist");
 const cluster = require("cluster");
 const compression = require("compression");
+const nodemailer = require("nodemailer");
+const twilio = require("twilio");
 const logger = require("./middlewares/logger.js");
 const advancedOptions = { useNewUrlParser: true, useUnifiedTopology: true };
 const { getNormalized } = require("./utils/normalizer.js");
 const getSystemInformation = require("./middlewares/info.js");
-
 
 const fakerData = randomData();
 const infoSystem = getSystemInformation();
@@ -27,8 +28,8 @@ const infoSystem = getSystemInformation();
 const products = new Container(optionsSQLite3, "products");
 const messages = new Container(optionsMariaDB, "messages");
 
-
-const mongoDBServer = process.env.MONGODBSERVER;
+const mongoDBServer =
+  "mongodb+srv://MirkoIP99:KZJDE5HVpYCKhngi@cluster0.ve17wc6.mongodb.net/sesiones?retryWrites=true&w=majority";
 
 const { PORT, MODE } = parseArgs(process.argv.slice(2), {
   alias: {
@@ -36,7 +37,7 @@ const { PORT, MODE } = parseArgs(process.argv.slice(2), {
     m: "MODE",
   },
   default: {
-    PORT: process.argv[2] || 8080,
+    PORT: 8080,
     MODE: "FORK",
   },
 });
@@ -120,6 +121,65 @@ if (MODE === "CLUSTER" && cluster.isPrimary) {
       const dbProducts = await products.getAll();
       io.sockets.emit("products", dbProducts);
     });
+    socket.on("processProducts", async () => {
+      console.log("Productos procesados en el backend", dbProducts);
+      function createSendMail(mailConfig) {
+        const transporter = nodemailer.createTransport(mailConfig);
+
+        return function sendMail({ to, subject, text, html }) {
+          const mailOptions = {
+            from: mailConfig.auth.user,
+            to,
+            subject,
+            text,
+            html,
+          };
+
+          return transporter.sendMail(mailOptions);
+        };
+      }
+
+      const MY_GMAIL = "mirkopes.4050@gmail.com";
+
+      function createSendMailGmail() {
+        return createSendMail({
+          service: "gmail",
+          port: 587,
+          auth: {
+            user: MY_GMAIL,
+            pass: "vrhrsznbdrwbmroa",
+          },
+        });
+      }
+
+      const sendMail = createSendMailGmail();
+
+      const cuenta = MY_GMAIL;
+      const asunto = "Productos Enviados";
+      const mensajeHtml = `Productos Enviados: ${JSON.stringify(dbProducts)}`;
+
+      const info = await sendMail({
+        to: cuenta,
+        subject: asunto,
+        html: mensajeHtml,
+      });
+
+      const account_sid = "AC1adf252f4dbc79c51ae913c207f5ff41";
+      const authToken = "ad57ed447cee5bbb585e286bd72d5874";
+
+      const client = twilio(account_sid, authToken);
+
+      const options = {
+        body: `Productos Enviados: ${JSON.stringify(dbProducts)}`,
+        from: "whatsapp:+14155238886",
+        to: "whatsapp:+5491158069635",
+      };
+
+      const message = await client.messages.create(options);
+
+      console.log(message);
+      console.log(info);
+    });
     socket.on("message", async (message) => {
       messages.save(message);
       const dbMessages = await messages.getAll();
@@ -145,14 +205,12 @@ if (MODE === "CLUSTER" && cluster.isPrimary) {
     res.json(infoSystem);
   });
 
-  app.get('*', (req, res) => {
-    logger.warn('Ruta no implementada');
-    res.send('Ruta no implementada');
+  app.get("*", (req, res) => {
+    logger.warn("Ruta no implementada");
+    res.send("Ruta no implementada");
   });
 
-  const server = httpserver.listen(PORT, () => {
+  httpserver.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
   });
-
-  server.on("error", (err) => console.log(`Error: ${err}`));
 }

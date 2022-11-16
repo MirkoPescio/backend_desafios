@@ -9,6 +9,8 @@ const imgInput = document.querySelector('#img-product');
 const tableProducts = document.querySelector('#table-products');
 const sectionProduct = document.querySelector('#section-products');
 const noProducts = document.querySelector('#no-products');
+const emptyCart = document.querySelector('#emptyCart');
+const processCart = document.querySelector('#processCart');
 
 formAddProduct.addEventListener('submit', e => {
 	e.preventDefault();
@@ -39,6 +41,14 @@ const renderProducts = products => {
 	} else {
 		noProducts.style.display = 'block';
 	}
+}
+
+const procesarProductos = (products) => {
+	processCart.addEventListener("click", (e) => {
+		e.preventDefault();
+		console.log(products);
+		socket.emit('processProducts', products);
+	});
 }
 
 // Chat form
@@ -81,6 +91,7 @@ const renderChat = mensajes => {
 
 socket.on('products', products => {
 	renderProducts(products);
+	procesarProductos(products);
 });
 
 socket.on('messages', mensajes => {
