@@ -210,7 +210,7 @@ if (MODE === "CLUSTER" && cluster.isPrimary) {
     res.send("Ruta no implementada");
   });
 
-  httpserver.listen(PORT, () => {
+  app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
   });
 }
