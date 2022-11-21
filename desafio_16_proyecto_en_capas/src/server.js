@@ -82,6 +82,7 @@ if (MODE === "CLUSTER" && cluster.isPrimary) {
 
   app.use(router);
   app.use(express.static(path.join(__dirname, "./views")));
+  app.use(express.static(path.join(__dirname, "../public")));
   app.engine("handlebars", engine());
   app.set("views", path.join(__dirname, "./views"));
   app.set("view engine", "handlebars");
