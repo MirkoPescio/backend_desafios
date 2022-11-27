@@ -636,43 +636,66 @@
 {"level":30,"time":1668982405377,"pid":17232,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
 {"level":40,"time":1668982410261,"pid":17232,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
 {"level":40,"time":1668982411088,"pid":17232,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":30,"time":1669472938048,"pid":19432,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
-{"level":40,"time":1669472945183,"pid":19432,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669472951748,"pid":19432,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669472960762,"pid":19432,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":30,"time":1669474271024,"pid":16808,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
-{"level":30,"time":1669474433235,"pid":19248,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
-{"level":30,"time":1669474459581,"pid":6668,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
-{"level":30,"time":1669474545627,"pid":14252,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
-{"level":40,"time":1669474553588,"pid":14252,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669474554105,"pid":14252,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669474559114,"pid":14252,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669474559536,"pid":14252,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669474621569,"pid":14252,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669474621991,"pid":14252,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":30,"time":1669474637164,"pid":616,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
-{"level":40,"time":1669474651644,"pid":616,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669474652091,"pid":616,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669474658241,"pid":616,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669474658753,"pid":616,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669474826578,"pid":616,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669474827003,"pid":616,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669474828213,"pid":616,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669474828644,"pid":616,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":30,"time":1669475156698,"pid":8716,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
-{"level":30,"time":1669475173429,"pid":9660,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
-{"level":40,"time":1669475234752,"pid":9660,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669475235164,"pid":9660,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":30,"time":1669475249501,"pid":8324,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
-{"level":30,"time":1669475383111,"pid":11288,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
-{"level":30,"time":1669475443823,"pid":18656,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
-{"level":40,"time":1669475453788,"pid":18656,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669475454198,"pid":18656,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669475459272,"pid":18656,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669475459702,"pid":18656,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669475558028,"pid":18656,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669475558396,"pid":18656,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669476288073,"pid":18656,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669476295518,"pid":18656,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669476305104,"pid":18656,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
-{"level":40,"time":1669476309034,"pid":18656,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":30,"time":1669567147528,"pid":16592,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":40,"time":1669567162012,"pid":16592,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669567173125,"pid":16592,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669567179560,"pid":16592,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":30,"time":1669570103378,"pid":12640,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":40,"time":1669570108095,"pid":12640,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669570122090,"pid":12640,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669570125557,"pid":12640,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669570126869,"pid":12640,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669570134479,"pid":12640,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":30,"time":1669573139172,"pid":10568,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":30,"time":1669573383580,"pid":13120,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":40,"time":1669573391124,"pid":13120,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669573399930,"pid":13120,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669573402386,"pid":13120,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":30,"time":1669576790378,"pid":304,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":40,"time":1669576799945,"pid":304,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669576809163,"pid":304,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669576813032,"pid":304,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":30,"time":1669582756006,"pid":9460,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":40,"time":1669582759245,"pid":9460,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669582767473,"pid":9460,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669582796055,"pid":9460,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669582797871,"pid":9460,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669582847465,"pid":9460,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":30,"time":1669582945113,"pid":12616,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":40,"time":1669582951074,"pid":12616,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669582958751,"pid":12616,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":30,"time":1669583053749,"pid":7640,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":40,"time":1669583061890,"pid":7640,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669583069263,"pid":7640,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":30,"time":1669583647137,"pid":16512,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":40,"time":1669583652808,"pid":16512,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669583657840,"pid":16512,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":30,"time":1669584120119,"pid":11884,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":40,"time":1669584125292,"pid":11884,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669584136026,"pid":11884,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669584137450,"pid":11884,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669584142808,"pid":11884,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":30,"time":1669584212834,"pid":17176,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":40,"time":1669584220744,"pid":17176,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669584228108,"pid":17176,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":30,"time":1669584293737,"pid":16744,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":40,"time":1669584299764,"pid":16744,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669584305695,"pid":16744,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":30,"time":1669584339049,"pid":16640,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":40,"time":1669584343821,"pid":16640,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669584349273,"pid":16640,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":30,"time":1669584397649,"pid":7564,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":40,"time":1669584404911,"pid":7564,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669584411836,"pid":7564,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1669584444517,"pid":7564,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":30,"time":1669586670588,"pid":11640,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":40,"time":1669586738784,"pid":11640,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":30,"time":1669587477881,"pid":9860,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":30,"time":1669588410476,"pid":9652,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":30,"time":1669589073683,"pid":17116,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":30,"time":1669589220428,"pid":8592,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":30,"time":1669589449227,"pid":16820,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":30,"time":1669589632670,"pid":10632,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":30,"time":1669589851337,"pid":8536,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":30,"time":1669590084367,"pid":11856,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":30,"time":1669590523124,"pid":5148,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}

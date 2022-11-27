@@ -1,4 +1,3 @@
-
 const main = (req, res) => {
 	const { username } = req.session;
 	req.session.username = username;
