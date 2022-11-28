@@ -53,20 +53,20 @@ const procesarProductos = (products) => {
 
 // Chat form
 const chatForm = document.querySelector('#chat-form');
-const userEmail = document.querySelector('#user-email');
+const mail = document.querySelector('#email');
 const firstname = document.querySelector("#firstname");
 const lastname = document.querySelector("#lastname");
 const age = document.querySelector("#age");
-const alias = document.querySelector("#alias");
-const chatMessage = document.querySelector('#chat-message');
+const nick = document.querySelector("#nick");
+const text = document.querySelector('#text');
 const tableChat = document.querySelector('#table-chat');
 
 chatForm.addEventListener('submit', e => {
 	e.preventDefault();
-	if (userEmail.value == '') return alert('Ingresa tu email');
+	if (mail.value == '') return alert('Ingresa tu email');
 	const mensajes = {
-		email: userEmail.value,
-		message: chatMessage.value,
+		email: mail.value,
+		message: text.value,
 		date: new Date().toLocaleString()
 	}
 	console.log(mensajes)
@@ -83,9 +83,9 @@ const renderChat = mensajes => {
 			<b class="text-primary">${mensaje.email}</b>
 			[<span style="color: brown;">${mensaje.date}</span>]
 			: <i class="text-success">${mensaje.message}</i>
-		</div > `;
+		</div>`;
 		})
-		chatMessage.focus();
+		text.focus();
 	}
 }
 

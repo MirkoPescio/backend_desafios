@@ -11,8 +11,8 @@ async function getTestMessages(req, res) {
 
 async function postMessage(req, res) {
   try {
-    const { email, name, lastName, age, nick, avatar, text } = req.body
-    const messageID = await chatService.addMessage({ email, name, lastName, age, nick, avatar, text })
+    const { email, firstname, lastName, age, nick, avatar, text } = req.body
+    const messageID = await chatService.addMessage({ email, firstname, lastName, age, nick, avatar, text })
     res.json({ messageID })
   } catch (error) {
     res.status(500).json({ error: error.message || 'Error al agregar mensaje' })

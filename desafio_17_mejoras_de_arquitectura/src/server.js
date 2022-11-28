@@ -1,4 +1,5 @@
 require("dotenv").config();
+require('./persistence/store/firebase/connection')
 const express = require("express");
 const os = require("os");
 const { Server: HttpServer } = require("http");

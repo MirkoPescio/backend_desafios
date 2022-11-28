@@ -21,7 +21,7 @@ module.exports = class MessageDaoFirebase {
 
   async getAll() {
     try {
-      const res = await this.query.orderBy('date', 'asc').get()
+      const res = await this.query.get()
       const data = []
       res.forEach((doc) => data.push({ ...doc.data(), id: doc.id }))
       return formatDTO(data) 
@@ -66,5 +66,4 @@ module.exports = class MessageDaoFirebase {
       throw new Error(error)
     }
   }
-
 }

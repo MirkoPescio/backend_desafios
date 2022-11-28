@@ -11,9 +11,9 @@ async function createProduct() {
 
     await knex.schema.createTable('products', (table) => {
       table.increments('id').primary()
-      table.string('title', 100).notNullable()
+      table.string('name', 100).notNullable()
       table.decimal('price').notNullable()
-      table.string('thumbnail', 200).notNullable()
+      table.string('img', 200).notNullable()
     })
 
     console.log('products table created')

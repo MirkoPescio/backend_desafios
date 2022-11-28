@@ -6,8 +6,8 @@ function getAllMessages() {
   return messageRepository.getAll()
 }
 
-function addMessage({ email, message }) {
-  const newMessage = { email, message }
+function addMessage({ email, message, date }) {
+  const newMessage = { email, message, date }
   return messageRepository.save(newMessage)
 }
 

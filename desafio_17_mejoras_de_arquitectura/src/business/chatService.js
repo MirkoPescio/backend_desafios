@@ -5,12 +5,12 @@ async function getTestMessages() {
   return chatPersistence.getAllMessagesNormalized()
 }
 
-async function addMessage({ email, name, lastName, age, nick, avatar, text }) {
+async function addMessage({ email, firstname, lastName, age, nick, avatar, text }) {
   try {
     const isError = validateMessage({email, text})
     if(isError) throw new Error(isError)
 
-    const res = chatPersistence.addMessageWithAuthor({ email, name, lastName, age, nick, avatar, text })
+    const res = chatPersistence.addMessageWithAuthor({ email, firstname, lastName, age, nick, avatar, text })
     logger.info(`Registro de mensaje de ${email} exitosa`)
     return res
   } catch (error) {

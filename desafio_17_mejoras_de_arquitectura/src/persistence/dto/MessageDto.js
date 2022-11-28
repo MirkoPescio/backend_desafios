@@ -1,16 +1,14 @@
 class MessageDto {
-  constructor({ id, date, text, author }) {
+  constructor({ id, date, message, email, firstname, lastname, nick, avatar, age }) {
     this.id = id
     this.date = date
-    this.text = text
-    this.author = {
-      id: author.id,
-      name: author.name,
-      lastname: author.lastname,
-      nick: author.nick,
-      avatar: author.avatar,
-      age: author.age,
-    }
+    this.message = message
+    this.email = email,
+    this.firstname = firstname,
+    this.lastname = lastname,
+    this.nick = nick,
+    this.avatar = avatar,
+    this.age = age
   }
 }
 
