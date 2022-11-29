@@ -16,6 +16,8 @@ const MongoStore = require("connect-mongo");
 const parseArgs = require("minimist");
 const cluster = require("cluster");
 const compression = require("compression");
+const nodemailer = require("nodemailer");
+const twilio = require("twilio");
 const logger = require("./middlewares/logger.js");
 const advancedOptions = { useNewUrlParser: true, useUnifiedTopology: true };
 const getSystemInformation = require("./middlewares/info.js");
@@ -100,6 +102,65 @@ if (MODE === "CLUSTER" && cluster.isPrimary) {
       productsDB.addProduct(product);
       const dbProducts = await productsDB.getAllProducts();
       io.sockets.emit("products", dbProducts);
+    });
+    socket.on("processProducts", async () => {
+      console.log("Productos procesados en el backend", dbProducts);
+      function createSendMail(mailConfig) {
+        const transporter = nodemailer.createTransport(mailConfig);
+
+        return function sendMail({ to, subject, text, html }) {
+          const mailOptions = {
+            from: mailConfig.auth.user,
+            to,
+            subject,
+            text,
+            html,
+          };
+
+          return transporter.sendMail(mailOptions);
+        };
+      }
+
+      const MY_GMAIL = "mirkopes.4050@gmail.com";
+
+      function createSendMailGmail() {
+        return createSendMail({
+          service: "gmail",
+          port: 587,
+          auth: {
+            user: MY_GMAIL,
+            pass: "vrhrsznbdrwbmroa",
+          },
+        });
+      }
+
+      const sendMail = createSendMailGmail();
+
+      const cuenta = MY_GMAIL;
+      const asunto = "Productos Enviados";
+      const mensajeHtml = `Productos Enviados: ${JSON.stringify(dbProducts)}`;
+
+      const info = await sendMail({
+        to: cuenta,
+        subject: asunto,
+        html: mensajeHtml,
+      });
+
+      const account_sid = "AC1adf252f4dbc79c51ae913c207f5ff41";
+      const authToken = "ad57ed447cee5bbb585e286bd72d5874";
+
+      const client = twilio(account_sid, authToken);
+
+      const options = {
+        body: `Productos Enviados: ${JSON.stringify(dbProducts)}`,
+        from: "whatsapp:+14155238886",
+        to: "whatsapp:+5491158069635",
+      };
+
+      const message = await client.messages.create(options);
+
+      console.log(message);
+      console.log(info);
     });
     socket.on("message", async (message) => {
       chatDB.addMessage(message);
