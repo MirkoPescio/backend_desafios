@@ -17,17 +17,27 @@ function getProductsTest(num) {
   for (let i = 1; i <= num; i++) {
     products.push({
       id: i,
-      title: faker.commerce.productName(),
+      name: faker.commerce.productName(),
       price: faker.commerce.price(),
-      thumbnail: faker.image.business(),
+      img: faker.image.business(),
     })
   }
 
   return products
 }
 
+function deleteProduct(id) {
+  return productRepository.deleteById(id)
+}
+
+function updateProduct(id, newProduct) {
+  return productRepository.updateById(id, newProduct)
+}
+
 module.exports = {
   getAllProducts,
   addProduct,
   getProductsTest,
+  deleteProduct,
+  updateProduct
 }

@@ -468,3 +468,84 @@
 {"level":40,"time":1669851666817,"pid":2412,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
 {"level":30,"time":1669851668415,"pid":2412,"hostname":"DESKTOP-E65QVB9","msg":"Ruta accedida"}
 {"level":40,"time":1669851668820,"pid":2412,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":30,"time":1670109594560,"pid":6116,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":40,"time":1670109605701,"pid":6116,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1670109611896,"pid":6116,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1670109634912,"pid":6116,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1670109635530,"pid":6116,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1670109636147,"pid":6116,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1670109661548,"pid":6116,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1670110111667,"pid":6116,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1670110112210,"pid":6116,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1670110112714,"pid":6116,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1670110135249,"pid":6116,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1670110142331,"pid":6116,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1670110142924,"pid":6116,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1670110143435,"pid":6116,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1670110248034,"pid":6116,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1670110248414,"pid":6116,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":30,"time":1670148632741,"pid":4092,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":40,"time":1670148654271,"pid":4092,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1670148654856,"pid":4092,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1670148655265,"pid":4092,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":30,"time":1670151486245,"pid":18204,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":40,"time":1670151491969,"pid":18204,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":40,"time":1670151554283,"pid":18204,"hostname":"DESKTOP-E65QVB9","msg":"Ruta no implementada"}
+{"level":30,"time":1670152153138,"pid":1872,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":30,"time":1670164413448,"pid":8924,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":30,"time":1670164962837,"pid":2424,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":30,"time":1670165071130,"pid":2424,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670165071378,"pid":2424,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670165370285,"pid":2424,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670165370555,"pid":2424,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670165772725,"pid":2424,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670165773343,"pid":2424,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670165916265,"pid":2424,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670165916574,"pid":2424,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":50,"time":1670166078281,"pid":2424,"hostname":"DESKTOP-E65QVB9","msg":"Error en postProduct: faltan datos del producto"}
+{"level":50,"time":1670166078733,"pid":2424,"hostname":"DESKTOP-E65QVB9","msg":"Error en postProduct: faltan datos del producto"}
+{"level":30,"time":1670166159646,"pid":2664,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":30,"time":1670166165171,"pid":2664,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670166165601,"pid":2664,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670166182933,"pid":2664,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670166183336,"pid":2664,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670166296737,"pid":2664,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670166297134,"pid":2664,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670166492615,"pid":1264,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":30,"time":1670166498226,"pid":1264,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670166498643,"pid":1264,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670166530704,"pid":1264,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670166530976,"pid":1264,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670166632266,"pid":1264,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670166632883,"pid":1264,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670166651667,"pid":9440,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":30,"time":1670166657797,"pid":9440,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670166658103,"pid":9440,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670167046247,"pid":6344,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":30,"time":1670167056934,"pid":6344,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670167057368,"pid":6344,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670167165835,"pid":6344,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670167166187,"pid":6344,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670167191926,"pid":6344,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670167192269,"pid":6344,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670167283664,"pid":14724,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":30,"time":1670167293649,"pid":14724,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670167294062,"pid":14724,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670167576299,"pid":11368,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":30,"time":1670167585798,"pid":11368,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670167586313,"pid":11368,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670167802306,"pid":11368,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670167803481,"pid":11368,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670167846889,"pid":15784,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":30,"time":1670167893627,"pid":15784,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670167894098,"pid":15784,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670168552460,"pid":7860,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":30,"time":1670168580971,"pid":7860,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670168581465,"pid":7860,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670168597709,"pid":7860,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670168597988,"pid":7860,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670168728565,"pid":7860,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670168728883,"pid":7860,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670177864820,"pid":12552,"hostname":"DESKTOP-E65QVB9","msg":"Entregando información del sistema correcto"}
+{"level":30,"time":1670177878627,"pid":12552,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}
+{"level":30,"time":1670177878851,"pid":12552,"hostname":"DESKTOP-E65QVB9","msg":"Registro de producto exitosa"}

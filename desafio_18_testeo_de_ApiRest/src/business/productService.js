@@ -16,9 +16,20 @@ async function addProduct({name, price, img}) {
   }
 }
 
-
 async function getProductsTest() {
   return productPersistence.getProductsTest(5);
+}
+
+async function getProducts() {
+  return productPersistence.getAllProducts();
+}
+
+async function deleteProduct(id){
+  return productPersistence.deleteProduct(id);
+}
+
+async function updateProduct(id, {name, price, img}){
+  return productPersistence.updateProduct(id, {name, price, img});
 }
 
 
@@ -37,4 +48,7 @@ function validateProduct({name, price, img}) {
 module.exports = {
   addProduct,
   getProductsTest,
+  getProducts,
+  deleteProduct,
+  updateProduct
 }

@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node ./src/server.js",
     "dev": "nodemon ./src/server.js -p 8080 -m FORK",
-    "test": "node ./src/benchmark.js"
+    "test": "node ./src/benchmark.js",
+    "mochaTest": "mocha ./src/apirestfull.test.js"
   },
   "keywords": [],
   "author": "",
