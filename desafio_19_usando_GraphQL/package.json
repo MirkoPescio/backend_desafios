@@ -1,0 +1,50 @@
+{
+  "name": "desafio_18_testeo_de_apirest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "dev": "nodemon ./src/server.js -p 8080 -m FORK",
+    "test": "node ./src/benchmark.js",
+    "mochaTest": "mocha ./src/apirestfull.test.js --timeout 10000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autocannon": "^7.10.0",
+    "axios": "0.27.2",
+    "bcrypt": "^5.1.0",
+    "cluster": "^0.7.7",
+    "compression": "^1.7.4",
+    "connect-mongo": "^4.6.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-graphql": "^0.12.0",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "faker": "^5.4.0",
+    "firebase-admin": "^11.3.0",
+    "graphql": "^15.8.0",
+    "knex": "^2.2.0",
+    "minimist": "^1.2.7",
+    "mongoose": "^6.6.5",
+    "mongoose-cache": "^0.1.5",
+    "mysql": "^2.18.1",
+    "nodemailer": "^6.8.0",
+    "nodemon": "^2.0.20",
+    "normalizr": "^3.6.2",
+    "pino": "^8.7.0",
+    "socket.io": "^4.5.1",
+    "sqlite3": "^5.1.2",
+    "twilio": "^3.83.3",
+    "yargs": "^17.6.0"
+  },
+  "devDependencies": {
+    "chai": "4.3.6",
+    "mocha": "10.0.0",
+    "supertest": "6.2.4"
+  }
+}
