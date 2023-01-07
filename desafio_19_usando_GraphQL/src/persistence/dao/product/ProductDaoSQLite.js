@@ -59,4 +59,14 @@ module.exports = class PersonasDaoSQLite {
       return error
     }
   }
+
+  async updateById(id, newObj) {
+    try {
+      const res = await this.knex.from(this.tableName).where('id', id).update(newObj)
+      if (res === 0) throw new Error('El producto no existe')
+      return {id, ...newObj}
+    } catch (error) {
+      throw new Error(error.message)
+    }
+  }
 }

@@ -1,12 +1,13 @@
 require("dotenv").config();
-require('./persistence/store/firebase/connection')
+require('./persistence/store/firebase/connection');
 const express = require("express");
 const os = require("os");
 const { Server: HttpServer } = require("http");
 const { Server: IOServer } = require("socket.io");
 const { engine } = require("express-handlebars");
+const { graphqlHTTP } = require("express-graphql");
 const router = require("./routes/router.js");
-const productsDB = require('./persistence/productPersistence')
+const productsDB = require('./persistence/productPersistence');
 const chatDB = require('./persistence/chatPersistence')
 const cookieParser = require("cookie-parser");
 const randomData = require("./options/faker.js");
@@ -21,6 +22,7 @@ const twilio = require("twilio");
 const logger = require("./middlewares/logger.js");
 const advancedOptions = { useNewUrlParser: true, useUnifiedTopology: true };
 const getSystemInformation = require("./middlewares/info.js");
+const productGraphqlController = require('./controllers/productGraphqlController.js');
 const path = require("path");
 
 const fakerData = randomData();
@@ -81,6 +83,7 @@ if (MODE === "CLUSTER" && cluster.isPrimary) {
   app.engine("handlebars", engine());
   app.set("views", path.join(__dirname, "../public/views"));
   app.set("view engine", "handlebars");
+  app.use('/graphql', graphqlHTTP(productGraphqlController));
 
   mongoose.connect(mongoDBServer, function (err) {
     if (err) {

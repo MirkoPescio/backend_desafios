@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node ./src/server.js",
     "dev": "nodemon ./src/server.js -p 8080 -m FORK",
+    "DBscript": "node ./src/persistence/store/script.js",
     "test": "node ./src/benchmark.js",
     "mochaTest": "mocha ./src/apirestfull.test.js --timeout 10000"
   },

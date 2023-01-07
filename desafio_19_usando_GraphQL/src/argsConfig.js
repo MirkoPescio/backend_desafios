@@ -9,7 +9,7 @@ module.exports = {
         default: {
             PORT: 8080,
             MODE: "FORK",
-            DAO_PRODUCT: "Memory",
+            DAO_PRODUCT: "SQLite",
             DAO_MESSAGE: "Memory",
         }
     }
